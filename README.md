@@ -47,6 +47,7 @@ make sure to select the mesh file like in the screnshot bellow
 ![5](https://media.discordapp.net/attachments/310443386429767690/1112558229600354415/image.png?width=653&height=231)
 
 otherwise the script will fail cuz 16 bit bad
+if your exported diffuse maps dont have the color you expect make sure to set the "base color" and "diffuse" channels the same color (substance painter may not export diffuse correctly if both arent same)
 
 
 # The unzipped folder should look like this:
