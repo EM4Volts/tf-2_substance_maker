@@ -66,7 +66,7 @@ DO NOT TOUCH ANY OF THE FILES
 
 2. put your unedited, not self renamed exported Substance Painter textures in that new folder, dont move them, copy them, the folder gets cleared after a conversion
 3. open a terminal/cmd in side the same folder the script (main.py) is in
-4. in the terminal type ```py(or whatever u setup to call python 3.10+ from cmd) main.py cool_pak_name```
+4. in the terminal type ```py(or whatever youve setup to call python 3.10+ from cmd) main.py cool_pak_name```
 where you replace "cool_pak_name" with your folder name
 
 5. Press enter and it should start making your textures and the map. 
