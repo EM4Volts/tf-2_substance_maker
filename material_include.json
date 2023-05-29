@@ -1,0 +1,51 @@
+        {
+            "$type":"txtr",
+            "path":"texture/models/weapons_r2/PAKNAME/TEXNAME_col",
+			"saveDebugName": true
+		},
+		{			
+			"$type":"txtr",
+			"path":"texture/models/weapons_r2/PAKNAME/TEXNAME_gls",
+			"saveDebugName": true
+		},
+		{			
+			"$type":"txtr",
+			"path":"texture/models/weapons_r2/PAKNAME/TEXNAME_spc",
+			"saveDebugName": true
+		},
+		{		
+			"$type":"txtr",
+			"path":"texture/models/weapons_r2/PAKNAME/TEXNAME_nml",
+			"saveDebugName": true
+        },
+		{		
+			"$type":"txtr",
+			"path":"texture/models/weapons_r2/PAKNAME/TEXNAME_ao",
+			"saveDebugName": true
+		},
+		{
+            "$type":"matl",
+			"visibilityflags": "opaque",
+			"faceflags": 6,
+            "version":12,
+            "path":"models/weapons_r2/PAKNAME/TEXNAME",
+            "type": "skn",
+            "subtype":"viewmodel",
+            "surface": "default",
+            "width": 2048,
+            "height": 2048,
+            "textures":[
+			"texture/models/weapons_r2/PAKNAME/TEXNAME_col",
+			"texture/models/weapons_r2/PAKNAME/TEXNAME_nml",
+			"texture/models/weapons_r2/PAKNAME/TEXNAME_gls",
+			"texture/models/weapons_r2/PAKNAME/TEXNAME_spc",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"texture/models/weapons_r2/PAKNAME/TEXNAME_ao"
+			]  
+        },

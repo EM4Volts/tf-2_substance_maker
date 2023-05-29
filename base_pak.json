@@ -1,0 +1,12 @@
+{
+    "name": "PAKNAME",
+    "assetsDir": "../assets",
+    "outputDir": "../rpaks",
+	"starpakPath":"PAKNAME.starpak",
+    "version": 7,
+	"visibilityflags": "opaque",
+	"faceflags": 6,
+    "files":[
+        
+	]
+}
