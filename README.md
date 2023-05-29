@@ -13,7 +13,7 @@ auto generates a repak map that uses a color, normal, gloss, spec and AO texture
 
 Download the latest release zip and unzip somewhere on your PC (only tested on windows)
 
-Make sure you have Python 3.10+ installed
+Make sure you have Python 3.10+ installed and the imagemagick module installe [Instructions](https://docs.wand-py.org/en/0.6.2/guide/install.html)
 
 In Substance Painter make sure you have the following things setup:
 
