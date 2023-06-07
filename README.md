@@ -26,7 +26,7 @@ In Substance Painter make sure you have the following things setup:
 
 # Make an Export template like this: 
 
-![2](https://cdn.discordapp.com/attachments/310443386429767690/1115928157980213310/image.png)
+![2](https://cdn.discordapp.com/attachments/310443386429767690/1115933093686169670/image.png)
 
 (if you dont know how, the colored rectangles corespond to the ones on the maps on the right)
 
