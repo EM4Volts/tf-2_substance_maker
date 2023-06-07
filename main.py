@@ -7,7 +7,8 @@ titanfall_2_texture_set = [
     "col.png",
     "nml.png",
     "gls.png",
-    "spc.png"    
+    "spc.png",
+    "cav.png",
 ]
 
 texture_sets = [
@@ -65,7 +66,7 @@ def make_source_specular(textures_path, texture_list):
                print(f"{bcolors.SPC}Creating specular map for {i}{bcolors.ENDC}")
                with Image.open(textures_path + "/" + i + "_mtl.png") as mtl:
                     with Image.open(textures_path + "/" + i + "_col.png") as col:
-                         with Image.open(textures_path + "/" + i + "_tgls.png") as spc:
+                         with Image.open(textures_path + "/" + i + "_tspc.png") as spc:
                               tgls = spc.convert("RGB")
                               mtl = mtl.convert("RGB")
                               col = col.convert("RGB")
@@ -74,10 +75,21 @@ def make_source_specular(textures_path, texture_list):
                               #multiply mtl and col together
                               mtl = Image.blend(mtl, col, 0.5)
                               #multiply mtl and spc together
-                              mtl = Image.blend( tgls, mtl, 0.22)
+                              mtl = Image.blend(tgls, mtl, 0.22)
                               mtl.save(textures_path + "/" + i + "_spc.png")
 
-          
+def make_source_cav(texture_path, texture_list):
+     #cav is the blue channel of the normal map
+     #check if _nml.png exists for each texture in texture_list
+     #if it does, create a new texture called _cav.png
+     for i in texture_list:
+          if os.path.isfile(texture_path + "/" + i + "_nml.png"):
+               print(f"{bcolors.SPC}Creating cavity map for {i}{bcolors.ENDC}")
+               with Image.open(texture_path + "/" + i + "_nml.png") as nml:
+                    nml = nml.convert("RGB")
+                    cav = nml.split()[2]
+                    cav.save(texture_path + "/" + i + "_cav.png")
+
 def make_source_gls(texture_path, texture_list):
      #check if _rgh.png then invert and save as _gls.png
      for i in texture_list:
@@ -139,7 +151,7 @@ def convert_textures(asset_path):
           if filename.name.endswith("nml.png"):
                os.system("texconv.exe -f BC5_UNORM -srgb -ft dds " + filename.path + " -o " + asset_path)
           else:
-               if filename.name.endswith("gls.png"):
+               if filename.name.endswith("gls.png") or filename.name.endswith("cav.png"):
                     os.system("texconv.exe -f BC4_UNORM -srgbi -ft dds " + filename.path + " -o " + asset_path)
                else:
                     os.system("texconv.exe -f BC1_UNORM_SRGB -srgbi -ft dds " + filename.path + " -o " + asset_path)
@@ -185,6 +197,9 @@ if __name__ == "__main__":
 
      print(f"{bcolors.HEADER}generating color maps{bcolors.ENDC}")
      make_source_col(in_dir, tex_set)
+
+     print(f"{bcolors.HEADER}generating cavity maps{bcolors.ENDC}")   
+     make_source_cav(in_dir, tex_set)
 
      print(f"{bcolors.HEADER}moving textures{bcolors.ENDC}")
      move_textures(in_dir, tex_set)
