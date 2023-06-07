@@ -83,11 +83,9 @@ def make_source_cav(texture_path, texture_list):
      #check if _nml.png exists for each texture in texture_list
      #if it does, create a new texture called _cav.png
      for i in texture_list:
-          if os.path.isfile(texture_path + "/" + i + "_nml.png"):
+          if os.path.isfile(texture_path + "/" + i + "_sppcav.png"):
                print(f"{bcolors.SPC}Creating cavity map for {i}{bcolors.ENDC}")
-               with Image.open(texture_path + "/" + i + "_nml.png") as nml:
-                    nml = nml.convert("RGB")
-                    cav = nml.split()[2]
+               with Image.open(texture_path + "/" + i + "_sppcav.png") as cav:
                     cav.save(texture_path + "/" + i + "_cav.png")
 
 def make_source_gls(texture_path, texture_list):
