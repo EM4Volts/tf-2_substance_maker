@@ -11,7 +11,7 @@ auto generates a repak map that uses a color, normal, gloss, spec and AO texture
 ## Setup
 
 
-Download the latest release zip and unzip somewhere on your PC (only tested on windows)
+Download this repo as a zip and unzip it somewhere on your computer, download Texconv.exe from [DirectXTex](https://github.com/microsoft/DirectXTex/releases)
 
 Make sure you have Python 3.10+ installed and the imagemagick module installe [Instructions](https://docs.wand-py.org/en/0.6.2/guide/install.html) using pip ```pip install Wand```
 
