@@ -14,6 +14,7 @@ auto generates a repak map that uses a color, normal, gloss, spec and AO texture
 Download this repo as a zip and unzip it somewhere on your computer, download Texconv.exe from [DirectXTex](https://github.com/microsoft/DirectXTex/releases) and put it in the same folder as the main.py script.
 
 Make sure you have Python 3.10+ installed and the imagemagick module installe [Instructions](https://docs.wand-py.org/en/0.6.2/guide/install.html) using pip ```pip install Wand```
+Also make sure to have PILLOW installed via pip: [install](https://pillow.readthedocs.io/en/stable/installation.html#)
 
 In Substance Painter make sure you have the following things setup:
 
